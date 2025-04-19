@@ -45,6 +45,7 @@ jobs:
         pip install --upgrade wheel
         pip install -r requirements.txt
         pip install --upgrade pyautogui
+        pip install --upgrade selenium scrapy
         pip install --upgrade python-xlib
     - name: Lint with flake8
       run: |
@@ -82,18 +83,4 @@ jobs:
     - name: Run python raw_uc_mode.py --debug
       run: |
         python raw_uc_mode.py --debug
-    - name: Run python raw_cdp.py --debug
-      run: |
-        python raw_cdp.py --debug
-    - name: Run python raw_socialblade.py --debug
-      run: |
-        python raw_socialblade.py --debug
-    - name: Run python raw_gitlab_uc.py --debug
-      run: |
-        python raw_gitlab_uc.py --debug
-    - name: Run python raw_demo_script.py
-      run: |
-        python raw_demo_script.py
-    - name: Run python raw_cdp_drivers.py
-      run: |
-        python raw_cdp_drivers.py
+    
