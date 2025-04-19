@@ -12,9 +12,9 @@ jobs_to_sent = []
 
 with SB(uc=True, incognito=True, test=True) as sb:
     url = (
-    "https://www.upwork.com/nx/search/jobs/?amount=-20&nbs=1"
-    "&q=%28scraping%20OR%20automation%20OR%20extraction%29"
-    "&sort=recency&t=1"
+        "https://www.upwork.com/nx/search/jobs/?amount=-20&nbs=1"
+        "&q=%28scraping%20OR%20automation%20OR%20extraction%29"
+        "&sort=recency&t=1"
     )
     sb.activate_cdp_mode(url)
     sb.uc_gui_click_captcha()
