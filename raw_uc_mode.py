@@ -55,7 +55,11 @@ with SB(uc=True, incognito=True, test=True) as sb:
                 'div[data-test="UpCLineClamp JobDescription"] p::text'
             ).getall() if i.strip()
         ])
-        description = description.strip() if description else "No description available"
+        description = (
+            description.strip()
+            if description
+            else "No description available"
+        )
 
         if url not in old_jobs:
             new_jobs.append(str(url))
